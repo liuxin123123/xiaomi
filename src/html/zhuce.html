@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/zhuce.css">
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+    <div class="zhuce_wrap">
+        <img src="../imgs/logo.jpg" alt="">
+        <h3>注册小米账号</h3>
+        <div class="address">
+            <h1>国家/地区</h1>
+            <select>
+                <option value="">中国</option>
+                <option value="">法国</option>
+                <option value="">英国</option>
+                <option value="">美国</option>
+            </select>
+            <h2>成功注册账号后，国家和地区将不能在修改</h2>
+        </div>
+        <div class="phone">
+            <h1>手机号码</h1>
+            <input type="text" id="phone_num">
+            <select>
+                <option value="">+86</option>
+                <option value="">+76</option>
+                <option value="">+86</option>
+            </select>
+        </div>
+        <button class="btn">立即注册</button>
+        <h4>已阅读并同意:小米隐私政策</h4>
+    </div>
+
+    <script src="../script/jquery-1.8.3.min.js"></script>
+    <script>
+        function checkPhone(){ 
+            var phone = document.getElementById('phone_num').value;
+            if(!(/^1[3456789]\d{9}$/.test(phone))){ 
+                alert("手机号码有误，请重填");  
+                return false; 
+            } 
+        }
+        $('button').click(function(){
+            checkPhone();
+        })
+    </script>
+</body>
+</html>
